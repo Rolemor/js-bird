@@ -1,0 +1,264 @@
+* {
+    font-family: "Press Start 2P", cursive;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    line-height: 1;
+    height: 100vh;
+    width: 100vw;
+    display: table;
+    background-image: url("flappy-bird-wp8.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#container {
+    margin: auto;
+    background-color: darkcyan;
+    width: 40vw;
+    height: 70vh;
+    position: relative;
+    background-image: url("flappyback.png");
+    background-size: contain;
+    border-radius: 5%;
+    border: rgba(179, 115, 50, 0.9) 5px solid;
+}
+
+#bird {
+    position: absolute;
+    width: 7.5%;
+    height: 7%;
+    margin-left: 10vh;
+    background-image: url("flappybird.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 30%;
+}
+
+.birdUp {
+    transform: rotate(-20deg);
+}
+
+.birdDown {
+    transform: rotate(20deg);
+}
+
+#pipeNorth5 {
+    position: absolute;
+    animation: movePipeNorth 6s linear 1;
+    background-image: url("pipeNorth.png");
+    transform: rotate(180deg);
+    background-size: cover;
+    width: 10%;
+    height: 15%;
+}
+
+#pipeSouth5 {
+    height: 55%;
+    position: absolute;
+    animation: movePipeSouth5 6s linear 1;
+    background-image: url("pipeSouth.png");
+    background-size: cover;
+    width: 10%;
+}
+
+#pipeNorth4 {
+    position: absolute;
+    animation: movePipeNorth 6s linear 1;
+    background-image: url("pipeNorth.png");
+    transform: rotate(180deg);
+    background-size: cover;
+    width: 10%;
+    height: 40%;
+}
+
+#pipeSouth4 {
+    height: 25%;
+    position: absolute;
+    animation: movePipeSouth4 6s linear 1;
+    background-image: url("pipeSouth.png");
+    background-size: cover;
+    width: 10%;
+}
+
+#pipeNorth3 {
+    position: absolute;
+    animation: movePipeNorth 6s linear 1;
+    background-image: url("pipeNorth.png");
+    transform: rotate(180deg);
+    background-size: cover;
+    width: 10%;
+    height: 35%;
+}
+
+#pipeSouth3 {
+    height: 35%;
+    position: absolute;
+    animation: movePipeSouth3 6s linear 1;
+    background-image: url("pipeSouth.png");
+    background-size: cover;
+    width: 10%;
+}
+
+
+
+#pipeNorth2 {
+    position: absolute;
+    animation: movePipeNorth 6s linear 1;
+    background-image: url("pipeNorth.png");
+    transform: rotate(180deg);
+    background-size: cover;
+    width: 10%;
+    height: 21%;
+}
+
+#pipeSouth2 {
+    height: 45%;
+    position: absolute;
+    animation: movePipeSouth2 6s linear 1;
+    background-image: url("pipeSouth.png");
+    background-size: cover;
+    width: 10%;
+}
+
+
+
+#pipeNorth1 {
+    position: absolute;
+    animation: movePipeNorth 6s linear 1;
+    background-image: url("pipeNorth.png");
+    transform: rotate(180deg);
+    background-size: cover;
+    width: 10%;
+    height: 45%;
+}
+
+#pipeSouth1 {
+    height: 21%;
+    position: absolute;
+    animation: movePipeSouth1 6s linear 1;
+    background-image: url("pipeSouth.png");
+    background-size: cover;
+    width: 10%;
+}
+
+
+
+@keyframes movePipeNorth {
+    from {top: 0%; left: 90%;}
+    to {top: 0%; left: 0%;}
+}
+
+@keyframes movePipeSouth5 {
+    from {top: 45%; left: 90%;}
+    to {top: 45%; left: 0%;}
+}
+
+@keyframes movePipeSouth4 {
+    from {top: 75%; left: 90%;}
+    to {top: 75%; left: 0%;}
+}
+
+@keyframes movePipeSouth3 {
+    from {top: 65%; left: 90%;}
+    to {top: 65%; left: 0%;}
+}
+
+@keyframes movePipeSouth2 {
+    from {top: 55%; left: 90%;}
+    to {top: 55%; left: 0%;}
+}
+
+@keyframes movePipeSouth1 {
+    from {top: 79%; left: 90%;}
+    to {top: 79%; left: 0%;}
+
+}
+
+
+.hidden {
+    visibility: hidden;
+}
+
+.loseScreen {
+    margin: auto;
+    width: 40vw;
+    height: 70vh;
+    position: relative;
+    background-color: lightcoral;
+    border-radius: 5%;
+    text-align: center;
+    vertical-align: center;
+}
+
+#score {
+    margin: auto;
+    padding-top: 1%;
+    text-align: center;
+    position: relative;
+    font-size: 2em;
+    color: white;
+    font-weight: 700;
+    text-shadow: 2px 2px 0 black;
+    z-index: 5;
+}
+
+
+#game-over {
+    position: relative;
+    color: darkorange;
+    text-shadow: 3px 3px white;
+    font-size: 3.5em;
+    text-align: center;
+    padding-top: 7%;
+    z-index: 100;
+}
+
+
+#startButton {
+    position: relative;
+    color: green;
+    text-shadow: 3px 3px white;
+    font-size: 3.5em;
+    text-align: center;
+    padding-top: 7%;
+    z-index: 100;
+
+}
+
+#flapLabel {
+    position: relative;
+    color: rgba(179, 115, 50, 0.9);
+    text-shadow: 3px 3px white;
+    font-size: 2em;
+    text-align: center;
+    padding-top: 2%;
+    z-index: 100;
+
+}
+
+#here {
+    color: rgba(209, 69, 43, 0.9);
+}
+
+#restart-message {
+    position: relative;
+    color: black;
+    text-shadow: 3px 3px white;
+    font-size: 2em;
+    text-align: center;
+    padding-top: 2%;
+    z-index: 100;
+}
